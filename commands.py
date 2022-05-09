@@ -19,3 +19,8 @@ df_basket_reordered.show()
 #modo_2 - ordem decresente
 df_reordered = df.select(sorted(df.columns))
 df_reordered.show()
+
+# FILTRAR DF POR DATA
+dadosE_copia_editado = dadosE_copia.filter(dadosE_copia('ds').gt(lit('2016-01-20'))) #filtrar datas maiores que
+dadosE_copia_editado = dadosE_copia.filter(dadosE_copia('ds').lt(lit('2016-01-20'))) #filtrar datas menores que
+dadosE_copia_editado = dadosE_copia.filter(dadosE_copia('ds') === lit('2016-01-20')) #filtrar data iguais a
